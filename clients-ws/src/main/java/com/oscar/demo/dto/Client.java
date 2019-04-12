@@ -29,12 +29,6 @@ public class Client implements Serializable{
 	 Date birthDate;
 	 Boolean status;
 	 
-	/*
-	 * public Client(long l, String string, String string2, String string3, String
-	 * string4) { // TODO Auto-generated constructor stub this.id=l;
-	 * this.firstName=string; this.lastName=string2; this.phoneNumber=string3;
-	 * this.email=string4; }
-	 */
 	public Long getId() {
 		return id;
 	}
@@ -65,7 +59,5 @@ public class Client implements Serializable{
 	public void setStatus(Boolean status) {
 		this.status = status;
 	}
-
-	 
 	 
 	}
