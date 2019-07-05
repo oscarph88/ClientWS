@@ -15,7 +15,7 @@ public class ClientRequest {
 	private String firstName;
 	@NotNull(message="El apellido es requerido")
 	private String lastName;
-	String middleInitial;
+	private String middleInitial;
 	@NotNull(message="La fecha de nacimiento es requerida")
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="America/Mexico_City")
 	private Date birthDate;
