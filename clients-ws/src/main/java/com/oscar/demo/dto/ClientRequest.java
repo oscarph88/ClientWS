@@ -15,10 +15,13 @@ public class ClientRequest {
 	private String firstName;
 	@NotNull(message="El apellido es requerido")
 	private String lastName;
-	
+	String middleInitial;
 	@NotNull(message="La fecha de nacimiento es requerida")
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="America/Mexico_City")
 	private Date birthDate;
+	@NotNull(message="La fecha de inicio es requerida")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="America/Mexico_City")
+	private Date startDate;
 	
 	
 	public Long getId() {
@@ -50,6 +53,18 @@ public class ClientRequest {
 	}
 	public void setStatus(Boolean status) {
 		this.status = status;
+	}
+	public String getMiddleInitial() {
+		return middleInitial;
+	}
+	public void setMiddleInitial(String middleInitial) {
+		this.middleInitial = middleInitial;
+	}
+	public Date getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 	
 }

@@ -25,8 +25,11 @@ public class Client implements Serializable{
 	Long id;
 	 String firstName;
 	 String lastName;
+	 String middleInitial;
 	 @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="America/Mexico_City")
 	 Date birthDate;
+	 @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="America/Mexico_City")
+	 Date startDate;
 	 Boolean status;
 	 
 	public Long getId() {
@@ -58,6 +61,18 @@ public class Client implements Serializable{
 	}
 	public void setStatus(Boolean status) {
 		this.status = status;
+	}
+	public String getMiddleInitial() {
+		return middleInitial;
+	}
+	public void setMiddleInitial(String middleInitial) {
+		this.middleInitial = middleInitial;
+	}
+	public Date getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 	 
 	}
