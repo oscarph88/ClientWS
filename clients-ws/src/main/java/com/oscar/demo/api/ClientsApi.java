@@ -2,6 +2,7 @@ package com.oscar.demo.api;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -61,7 +62,9 @@ public class ClientsApi {
 	@RequestMapping(value="/clientCreate", method=RequestMethod.POST)
 	public ClientResponse save(@RequestBody @Valid ClientRequest clientRequest){
 	    // Mapeo
-	    Client client = mapper.map(clientRequest, Client.class);
+	    Client client = mapper.map(clientRequest, Client.class); 
+	    //Optional<String> middleInitial = Optional.of((client.getMiddleInitial()!=null)?client.getMiddleInitial():null);
+	    //log.info("ofNullable on Non-Empty Optional: " + Optional.ofNullable(middleInitial));
 	    Client updatedClient = clientService.save(client);
 
 	    ClientResponse contactResponse= new ClientResponse();
