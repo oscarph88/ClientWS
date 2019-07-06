@@ -109,7 +109,6 @@ public class ClientsApi {
 	
 	@RequestMapping(value="/clientList", method=RequestMethod.GET)
 	public ClientResponse list(){
-	    // Mapeo
 	    List<Client> clientes= new ArrayList<Client>();
 	    clientes = clientService.list();
 
