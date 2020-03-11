@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 public class Client implements Serializable{
 	 /**
-	 * 
+	 * COmment
 	 */
 	private static final long serialVersionUID = 1L;
 	
